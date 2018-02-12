@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div id="testParent"></div>
+
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ol>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/createStuff.js"></script>
+
+    <script>
+        $('ol li').createStuff().css({'background-color': 'blue'})
+
+        var jsDiv = document.createElement('span')
+        var parent = document.getElementById('testParent')
+        $(jsDiv).html("does this work?")
+        parent.appendChild(jsDiv)
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.calculator button {
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+}
+
+.calculator button.sm-text {
+    font-size: 16px;
+}
+
+.calculator button.btn-clear {
+    background-color: orange;
+}
+
+.calculator button.span2 {
+    height: 124px;
+}
+
+.calculator td {
+    vertical-align: top;
+}
+
+.center * {
+    margin: 10px auto;
+}

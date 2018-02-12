@@ -1,0 +1,76 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 0 30px;
+}
+
+#country-table {
+    display: none;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0
+}
+
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto
+}
+
+#search-countries {
+    margin-bottom: 20px;
+}
+
+#search-countries input,
+#search-countries select {
+    margin-right: 5px;
+}
+
+main {
+    display: flex
+}
+
+main > div {
+    min-width: 400px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+table {
+    background-color: #eee;
+}
+
+td {
+    padding: 5px 20px;
+}
+
+td.message {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: blue
+}
+
+td.message.error {
+    color: red;
+}
+
+thead td {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+#specs {
+    padding-left: 20px;
+}

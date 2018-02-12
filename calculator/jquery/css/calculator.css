@@ -1,0 +1,44 @@
+body {
+    font-family: arial, helvetica, sans-serif;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#specs {
+    max-width: 500px;
+}
+#calculator button {
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+}
+
+#calculator button.sm-text {
+    font-size: 16px;
+}
+
+#calculator button.btn-clear {
+    background-color: orange;
+}
+
+#calculator button.span2 {
+    height: 124px;
+}
+
+#calculator td {
+    vertical-align: top;
+}
+
+#totalPanel {
+    font-size: 45px;
+    width: 240px;
+    height: 80px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px #666;
+    text-align: center;
+    margin: 30px 0;
+    padding-top: 20px;
+}

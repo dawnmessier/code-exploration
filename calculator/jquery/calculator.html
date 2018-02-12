@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/calculator.css" />
+</head>
+<body>
+    <div id="main">
+        <div>
+            <output id="totalPanel">0</output>
+            <table id="calculator">
+                <tr>
+                    <td>
+                        <button class="sm-text btn-clear" value="clear">C/AC</button>
+                    </td>
+                    <td>
+                        <button class="sm-text" value="mu" disabled>MU</button>
+                    </td>
+                    <td>
+                        <button value="%" disabled>%</button>
+                    </td>
+                    <td>
+                        <button value="divide">/</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button value="7">7</button>
+                    </td>
+                    <td>
+                        <button value="8">8</button>
+                    </td>
+                    <td>
+                        <button value="9">9</button>
+                    </td>
+                    <td>
+                        <button value="multiply">x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button value="4">4</button>
+                    </td>
+                    <td>
+                        <button value="5">5</button>
+                    </td>
+                    <td>
+                        <button value="6">6</button>
+                    </td>
+                    <td>
+                        <button value="subtract">-</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button value="1">1</button>
+                    </td>
+                    <td>
+                        <button value="2">2</button>
+                    </td>
+                    <td>
+                        <button value="3">3</button>
+                    </td>
+                    <td rowspan="2">
+                        <button class="span2" value="add">+</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button value="0">0</button>
+                    </td>
+                    <td>
+                        <button value=".">.</button>
+                    </td>
+                    <td>
+                        <button value="total">=</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="specs">
+            <h2>Basic Calculator Specifications</h2>
+            <ol>
+                <li>Create panel for total and table of buttons including
+                    <ul>
+                        <li>Numbers (Floating point value)</li>
+                        <li>Operators</li>
+                        <li>Clear/all-clear - first press clears nextValue; second press clears all values</li>
+                        <li>Decimal point</li>
+                    </ul>
+                </li>
+                <li>If first number entered is an operator (non-number), nothing happens (total = 0)</li>
+                <li>Use reducers on array of numbers = [currentTotal, nextValue]</li>
+                <li>First number value is stored as a concatenation of numbers selected before the first operator key (and decimal point) = currentTotal</li>
+                <li>First operator selected is stored as activeOperator
+                    <ul>
+                <li>If operator is "=" and there is only one value, total = currentTotal</li>
+                </ul>
+                </li>
+                <li>Next value is stored as a concatenation of numbers selected before the next operator key = nextValue</li>
+                <li>When a second operator is selected, currentTotal is updated in array with numbers.reduce(operatorFn)</li>
+                <li>currentTotal is auto-updated after an operation is performed</li>
+                <li>After reduction, activeOperator is updated with a new operator</li>
+                <li>After reduction, nextValue is updated with a new concatenation of numbers</li>
+            </ol>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/utils/operations.js"></script>
+    <script src="js/utils/calculateObject.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>
