@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import SearchForm from './SearchForm'
-import List from './List'
+import SearchForm from '../components/SearchForm'
+import List from '../styled/List'
 
 class Search extends Component {
     constructor(props){

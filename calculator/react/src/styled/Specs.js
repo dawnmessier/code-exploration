@@ -1,5 +1,5 @@
 import React from 'react'
-import {Specifications} from '../styles/Calculator'
+import {Specifications} from '../css/Calculator'
 
 const Specs = () => {
     return (

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import {TotalPanel} from '../styles/Calculator'
-import NumberGrid from './NumberGrid'
+import {TotalPanel} from '../css/Calculator'
+import NumberGrid from '../styled/NumberGrid'
 import {Operations, IsNumber} from '../utils/Operations'
 
 class Calculator extends Component {

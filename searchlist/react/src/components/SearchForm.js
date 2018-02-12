@@ -48,7 +48,7 @@ class SearchForm extends Component {
                     <input id="searchValue" ref={input => this.searchValue = input} type="search" name="searchValue" placeholder="Search..." required />
 
                     <label htmlFor="searchType" className="sr-only">Choose to search by Name or Code</label>
-                    <select id="searchTYpe" defaultValue="name" name="searchType" ref={input => this.searchType = input}>
+                    <select id="searchType" defaultValue="name" name="searchType" ref={input => this.searchType = input}>
                         <option value="name">By Name</option>
                         <option value="code">By Code</option>
                     </select>
