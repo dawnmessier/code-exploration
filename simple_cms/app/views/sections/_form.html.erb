@@ -17,12 +17,12 @@
     <th>Content Type</th>
     <td>
         <%= f.radio_button(:content_type, 'text') %> Text
-        <%= f.radio_button(:content_type, 'html') %> HTML
+        <%= f.radio_button(:content_type, 'HTML') %> HTML
     </td>
   </tr>
   <tr>
     <th>Page</th>
-    <td><%= f.select(:page_id, @pages.map {|p| [p.name, p.id]}) %></td>
+    <td><%= f.object.page.name %></td>
   </tr>
   <th>Content</th>
   <td><%= f.text_area(:content, :size => '40x10') %></td>

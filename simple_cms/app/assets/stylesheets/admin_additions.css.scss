@@ -45,7 +45,7 @@ a.action.large {
 
 /* small action buttons */
 .actions {
-  width: 200px;
+  width: 300px;
   a.action {
     float: left;
     min-width: 3.5em;
@@ -63,6 +63,11 @@ a.action.large {
   text-align: center;
   background: #B6D491;
   color: #4C2516;
+
+  &.alert {
+      background: red;
+      color: white;
+  }
 }
 
 .back-link {
