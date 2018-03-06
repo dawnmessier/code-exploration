@@ -12,7 +12,7 @@ Basic search built with jQuery and ReactJs to compare
 
 ## Search Autocomplete Plugin
 
-See [Find It Fast](https://github.com/dawnmessier/FindItFast)
+See [Find It Fast](https://dawnmessier.github.io/FindItFast/)
 
 ## Simple CMS
 
