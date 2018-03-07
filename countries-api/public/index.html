@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,700,700i" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/findItFast.css" />
+        <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Find It Fast</h1>
+            <h2>A jQuery Search Autocomplete Plugin focused on WAI-ARIA (Accessibility)</h2>
+            <p>Accessibility for the impaired is often overlooked when building a website. It is a large subject to learn, and can be time-consuming to implement. This plugin is designed to cut down on that effort by providing a search autocomplete (form + list) built with all the necessary ARIA HTML.</p>
+            <p><a href="https://dawnmessier.github.io/FindItFast/" target="_blank">Find It Fast</a> on GitHub</p>
+
+            <h4>Examples using an API Resource</h4>
+            <div class="flexIt">
+                <div id="search1" class="autoSearch2"></div>
+                <div id="search2" class="autoSearch2"></div>
+            </div>
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="js/jquery.finditfast.min.js"> </script>
+        <script>
+            $('#search1').findItFast({
+                dataConfig: {
+                    type: 'url',
+                    src: '/countries/search?limit=10',
+                    key: 'name',
+                    href: 'url',
+                    timer: 1000
+                },
+                templates: {
+                    form: {
+                        label: 'Search by country name',
+                        hideLabelText: true,
+                        placeholder: 'Search by country name',
+                        name: 'search1form',
+                        inputName: 'q'
+                    },
+                    listItems: {
+    					includeLinks: true
+                    }
+                }
+            })
+            $('#search2').findItFast({
+                dataConfig: {
+                    type: 'url',
+                    src: '/countries/search?limit=5&key=code',
+                    key: 'code'
+                },
+                templates: {
+                    form: {
+                        label: 'Search by country code',
+                        name: 'search2form',
+                        submitHtml: '<img src="images/search.svg" />',
+                        submitType: 'icon',
+                        inputName: 'q'
+                    }
+                },
+                ariaConfig: {
+                    includeLiveRegion: true
+                }
+            })
+        </script>
+    </body>
+</html>
